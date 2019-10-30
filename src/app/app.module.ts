@@ -19,6 +19,8 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { LoginGuard } from './login.guard';
 import { NoLoginGuard } from './no-login.guard';
+import { HttpModule } from '@angular/http';
+import { AdminService } from './service/AdminService';
 
 
 
@@ -62,9 +64,10 @@ const routes: Routes=  [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
-  providers: [LoginGuard,NoLoginGuard],
+  providers: [LoginGuard,NoLoginGuard, AdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
