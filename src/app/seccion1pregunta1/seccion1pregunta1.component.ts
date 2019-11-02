@@ -11,7 +11,7 @@ import { Pregunta } from '../service/Pregunta';
 export class Seccion1pregunta1Component implements OnInit {
 
   constructor(private router: Router, private AdminService : AdminService) { 
-    
+    this.getPregunta()
   }
 
   ngOnInit() {
@@ -26,12 +26,12 @@ export class Seccion1pregunta1Component implements OnInit {
     this.router.navigate(['/seccion1pregunta2']);
     }
 
-  Preguntas : Pregunta[]=[];
-  
-  Pregunta=new Pregunta();
-
   getPregunta():void{
-     this.AdminService.getPreguntas().then(Preguntas => this.Preguntas= Preguntas)
+     this.AdminService.getPreguntas().then(function(data){
+       console.log(data)
+       document.getElementById("prueba").firstChild.textContent = data.descripcion
+     })
+     
   }
 
 }
