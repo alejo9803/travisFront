@@ -25,6 +25,7 @@ import { AdminService } from './service/AdminService';
 
 
 
+
 const routes: Routes=  [ 
 {path:'',component: LoginComponent, canActivate:[NoLoginGuard]},   
 {path:'login',component: LoginComponent, canActivate:[NoLoginGuard]},
@@ -58,6 +59,7 @@ const routes: Routes=  [
     Seccion2pregunta3Component,
     Prediccion2seccion2Component,
     LoginComponent,
+    
     
   ],
   imports: [

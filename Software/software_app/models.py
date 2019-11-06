@@ -19,23 +19,15 @@ class Paciente(models.Model):
 	numeroCelular=models.IntegerField(blank=True, null=True)
 	idPsicologo=models.ForeignKey('Psicologo', on_delete=models.CASCADE)
 
-class Opcion(models.Model):
-	idOpcion=models.IntegerField(primary_key=True)
-	descripcion=models.CharField(max_length=100, null=False)
-
-class Respuesta(models.Model):
-	idRespuesta=models.IntegerField(primary_key=True)
-	idOpcion=models.ForeignKey('Opcion', on_delete=models.CASCADE, null=False, blank=False)
-
 class Pregunta(models.Model):
 	idPregunta=models.IntegerField(primary_key=True)
 	descripcion=models.CharField(max_length=100, null=False)
-	idRespuesta=models.ForeignKey('Respuesta', on_delete=models.CASCADE, blank=True, null=True)
 
 class Pregunta_Paciente(models.Model):
 	idPregunta_Paciente=models.IntegerField(primary_key=True)
 	idPaciente=models.ForeignKey('Paciente', on_delete=models.CASCADE)
 	idPregunta=models.ForeignKey('Pregunta', on_delete=models.CASCADE)
+	respuesta=models.CharField(max_length=2, blank=True, null=True)
 
 class Historia(models.Model):
 	idHistoria=models.IntegerField(primary_key=True)
@@ -45,9 +37,5 @@ class Historia(models.Model):
 	idPsicologo=models.ForeignKey('Psicologo', on_delete=models.CASCADE)
 	idPregunta_Paciente=models.ForeignKey('Pregunta_Paciente', on_delete=models.CASCADE)
 
-class Opcion_Pregunta(models.Model):
-	idOpcion_Pregunta=models.IntegerField(primary_key=True)
-	idOpcion=models.ForeignKey('Opcion', on_delete=models.CASCADE)
-	idPregunta=models.ForeignKey('Pregunta', on_delete=models.CASCADE)
 
 		

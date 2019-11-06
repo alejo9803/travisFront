@@ -18,8 +18,12 @@ export class AdminService{
         return resultado
     }
 
-    create(pregunta:Pregunta): Observable<Pregunta> {   
-        return this.http.post(this.urlEndPoint, pregunta, {})
+    createPregunta(p: Pregunta): Promise<Pregunta>{
+        return this.http
+        .post("http://localhost:8000/pregunta", JSON.stringify(p), {headers: this.headers})
+        .toPromise()
+        .then(response => response.json() as Pregunta)
+
     }
 }
 
