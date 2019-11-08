@@ -12,6 +12,7 @@ export class Seccion1pregunta1Component implements OnInit {
 
   constructor(private router: Router, private AdminService : AdminService) { 
     this.getPregunta()
+    this.save()
   }
 
   ngOnInit() {
@@ -33,5 +34,15 @@ export class Seccion1pregunta1Component implements OnInit {
      })
      
   }
+
+  pregunta = new Pregunta();
+
+  save(): void{
+    this.pregunta.idPregunta=13;
+    this.pregunta.descripcion="no eres tu?";
+    this.AdminService.createPregunta(this.pregunta);
+
+  }
+
 
 }

@@ -2,9 +2,9 @@ from django.shortcuts import render
 
 from rest_framework import generics
 
-from software_app.models import Psicologo, Paciente, Pregunta, Historia, Respuesta, Opcion, Pregunta_Paciente, Opcion_Pregunta 
+from software_app.models import Psicologo, Paciente, Pregunta, Historia, Pregunta_Paciente 
 
-from software_app.serializer import PsicologoSerializer, PacienteSerializer, PreguntaSerializer, HistoriaSerializer, RespuestaSerializer, OpcionSerializer, Pregunta_PacienteSerializer, Opcion_PreguntaSerializer
+from software_app.serializer import PsicologoSerializer, PacienteSerializer, PreguntaSerializer, HistoriaSerializer, Pregunta_PacienteSerializer
 
 
 class PsicologoList(generics.ListCreateAPIView):
@@ -39,22 +39,6 @@ class HistoriaDetail(generics.RetrieveUpdateDestroyAPIView):
 	queryset = Historia.objects.all()
 	serializer_class = HistoriaSerializer
 
-class RespuestaList(generics.ListCreateAPIView):
-	queryset = Respuesta.objects.all()
-	serializer_class = RespuestaSerializer
-
-class RespuestaDetail(generics.RetrieveUpdateDestroyAPIView):
-	queryset = Respuesta.objects.all()
-	serializer_class = RespuestaSerializer
-
-class OpcionList(generics.ListCreateAPIView):
-	queryset = Opcion.objects.all()
-	serializer_class = OpcionSerializer
-
-class OpcionDetail(generics.RetrieveUpdateDestroyAPIView):
-	queryset = Opcion.objects.all()
-	serializer_class = OpcionSerializer
-
 class Pregunta_PacienteList(generics.ListCreateAPIView):
 	queryset = Pregunta_Paciente.objects.all()
 	serializer_class = Pregunta_PacienteSerializer
@@ -63,11 +47,4 @@ class Pregunta_PacienteDetail(generics.RetrieveUpdateDestroyAPIView):
 	queryset = Pregunta_Paciente.objects.all()
 	serializer_class = Pregunta_PacienteSerializer
 
-class Opcion_PreguntaList(generics.ListCreateAPIView):
-	queryset = Opcion_Pregunta.objects.all()
-	serializer_class = Opcion_PreguntaSerializer
-
-class Opcion_PreguntaDetail(generics.RetrieveUpdateDestroyAPIView):
-	queryset = Opcion_Pregunta.objects.all()
-	serializer_class = Opcion_PreguntaSerializer
 # Create your views here.

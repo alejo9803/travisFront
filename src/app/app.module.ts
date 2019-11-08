@@ -37,6 +37,7 @@ import { Prediccion3seccion1pnoComponent } from './prediccion3seccion1pno/predic
 
 
 
+
 const routes: Routes=  [ 
 {path:'',component: LoginComponent, canActivate:[NoLoginGuard]},   
 {path:'login',component: LoginComponent, canActivate:[NoLoginGuard]},
@@ -94,6 +95,7 @@ const routes: Routes=  [
     Prediccion2seccion1pnoComponent,
     Prediccion3seccion1pnoComponent,
   
+    
     
   ],
   imports: [
