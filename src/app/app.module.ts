@@ -34,6 +34,7 @@ import { Prediccion1seccion1pnoComponent } from './prediccion1seccion1pno/predic
 import { Prediccion2seccion1pnoComponent } from './prediccion2seccion1pno/prediccion2seccion1pno.component';
 import { Prediccion2seccion1noComponent } from './prediccion2seccion1no/prediccion2seccion1no.component';
 import { Prediccion4seccion1pnoComponent } from './prediccion4seccion1pno/prediccion4seccion1pno.component';
+import { Prediccion3seccion1Component } from './prediccion3seccion1/prediccion3seccion1.component';
 
 
 
@@ -65,6 +66,7 @@ const routes: Routes=  [
 {path:'prediccion2seccion1pno',component:Prediccion2seccion1pnoComponent, canActivate: [LoginGuard]},
 {path:'prediccion4seccion1pno',component:Prediccion4seccion1pnoComponent, canActivate: [LoginGuard]},
 {path:'prediccion2seccion1no',component:Prediccion2seccion1noComponent, canActivate: [LoginGuard]},
+{path:'prediccion3seccion1',component:Prediccion3seccion1Component, canActivate: [LoginGuard]},
 ];
 
 @NgModule({
@@ -96,6 +98,7 @@ const routes: Routes=  [
     Prediccion2seccion1pnoComponent,
     Prediccion4seccion1pnoComponent,
     Prediccion2seccion1noComponent,
+    Prediccion3seccion1Component,
   
     
     
