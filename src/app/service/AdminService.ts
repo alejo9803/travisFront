@@ -17,11 +17,7 @@ export class AdminService{
         .then(response=> response.json() as Pregunta)        
         return resultado
     }
-<<<<<<< HEAD
-/*
-    create(pregunta:Pregunta): Observable<Pregunta> {   
-        return this.http.post(this.urlEndPoint, pregunta, {})
-=======
+
 
     createPregunta(p: Pregunta): Promise<Pregunta>{
         return this.http
@@ -29,8 +25,7 @@ export class AdminService{
         .toPromise()
         .then(response => response.json() as Pregunta)
 
->>>>>>> 8f9532df90223bb86252ecd2a239fa44e8fb132b
     }
-    */
+    
 }
 

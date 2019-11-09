@@ -16,4 +16,13 @@ export class Seccion1pregunta2Component implements OnInit {
     localStorage.removeItem('email');
     this.router.navigate(['']);
   }
+  guardarRespuestaSI(respuesta){
+    localStorage.setItem( 'respuesta11', respuesta);
+    this.router.navigate(['/seccion1pregunta3']);
+    }
+
+    guardarRespuestaNO(respuesta){
+      localStorage.setItem( 'respuesta11', respuesta);
+      this.router.navigate(['/prediccion2seccion1no']);
+      }
 }

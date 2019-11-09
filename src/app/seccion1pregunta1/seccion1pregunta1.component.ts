@@ -12,7 +12,7 @@ export class Seccion1pregunta1Component implements OnInit {
 
   constructor(private router: Router, private AdminService : AdminService) { 
     this.getPregunta()
-    this.save()
+    // this.save()
   }
 
   ngOnInit() {
@@ -22,10 +22,15 @@ export class Seccion1pregunta1Component implements OnInit {
     this.router.navigate(['']);
   }
 
-  guardarRespuesta(respuesta){
+  guardarRespuestaSI(respuesta){
     localStorage.setItem( 'respuesta11', respuesta);
     this.router.navigate(['/seccion1pregunta2']);
     }
+
+    guardarRespuestaNO(respuesta){
+      localStorage.setItem( 'respuesta11', respuesta);
+      this.router.navigate(['/prediccion2seccion1no']);
+      }
 
   getPregunta():void{
      this.AdminService.getPreguntas().then(function(data){

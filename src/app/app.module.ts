@@ -32,7 +32,8 @@ import { Seccion1pregunta3pComponent } from './seccion1pregunta3p/seccion1pregun
 import { Prediccion1seccion1pComponent } from './prediccion1seccion1p/prediccion1seccion1p.component';
 import { Prediccion1seccion1pnoComponent } from './prediccion1seccion1pno/prediccion1seccion1pno.component';
 import { Prediccion2seccion1pnoComponent } from './prediccion2seccion1pno/prediccion2seccion1pno.component';
-import { Prediccion3seccion1pnoComponent } from './prediccion3seccion1pno/prediccion3seccion1pno.component';
+import { Prediccion2seccion1noComponent } from './prediccion2seccion1no/prediccion2seccion1no.component';
+import { Prediccion4seccion1pnoComponent } from './prediccion4seccion1pno/prediccion4seccion1pno.component';
 
 
 
@@ -62,8 +63,8 @@ const routes: Routes=  [
 {path:'prediccion1seccion1p',component:Prediccion1seccion1pComponent, canActivate: [LoginGuard]},
 {path:'prediccion1seccion1pno',component:Prediccion1seccion1pnoComponent, canActivate: [LoginGuard]},
 {path:'prediccion2seccion1pno',component:Prediccion2seccion1pnoComponent, canActivate: [LoginGuard]},
-{path:'prediccion3seccion1pno',component:Prediccion3seccion1pnoComponent, canActivate: [LoginGuard]},
-
+{path:'prediccion4seccion1pno',component:Prediccion4seccion1pnoComponent, canActivate: [LoginGuard]},
+{path:'prediccion2seccion1no',component:Prediccion2seccion1noComponent, canActivate: [LoginGuard]},
 ];
 
 @NgModule({
@@ -93,7 +94,8 @@ const routes: Routes=  [
     Prediccion1seccion1pComponent,
     Prediccion1seccion1pnoComponent,
     Prediccion2seccion1pnoComponent,
-    Prediccion3seccion1pnoComponent,
+    Prediccion4seccion1pnoComponent,
+    Prediccion2seccion1noComponent,
   
     
     
