@@ -19,6 +19,7 @@ export class Seccion2pregunta2Component implements OnInit {
     this.router.navigate(['']);
   }
 
+<<<<<<< HEAD
   guardarRespuesta(respuesta){
     localStorage.setItem( 'respuesta6', respuesta);
       this.router.navigate(['/seccion2pregunta3']);
@@ -33,4 +34,15 @@ export class Seccion2pregunta2Component implements OnInit {
      })
      
   }
+=======
+  guardarRespuestaSI(respuesta){
+    localStorage.setItem( 'respuesta11', respuesta);
+    this.router.navigate(['/seccion2pregunta3']);
+    }
+
+    guardarRespuestaNO(respuesta){
+      localStorage.setItem( 'respuesta11', respuesta);
+      this.router.navigate(['/prediccion3seccion1']);
+      }
+>>>>>>> 7b792524f453bb006604cd55931636d93866eccc
 }

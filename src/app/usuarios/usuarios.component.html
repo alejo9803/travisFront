@@ -1,0 +1,25 @@
+<mat-card>
+
+        <ng-template tdLoading="depositos.list">
+            <mat-list class="will-load">
+                <div class="pad" *ngIf="depositos?.length === 0" layout="row" layout-align="center">
+                    <h3> No hay depositos para mostrar </h3>
+                </div>
+    
+                <ng-template let-depo let-last="last" ngFor [ngForOf]="usuarios">
+                    <mat-list-item>
+                        <mat-icon matListAvatar>dns</mat-icon>
+                        <h3 matLine> ID: {{depo.id}}</h3>
+                        <h3 matLine> {{depo.descripcion}}</h3>
+                        <button mat-icon-button (click)="delete(depo)">
+                    
+                        </button>
+                    </mat-list-item>
+    
+                    <mat-divider *ngIf="!last" [inset]="true"></mat-divider>
+                </ng-template>
+            </mat-list>
+        </ng-template>
+    </mat-card>
+    
+    

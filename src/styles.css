@@ -23,7 +23,7 @@
   }
 
   .parrafos{
-
+    font-size: 18pt;
     text-align: center;
     padding-left: 200px;
     padding-right: 200px;
@@ -150,3 +150,6 @@ input[type=password]{
 
 
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
