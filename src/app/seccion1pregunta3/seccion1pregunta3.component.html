@@ -11,21 +11,15 @@
                 </h2>      
     </div>
 <br>
-    <div class="parrafos">
-            <FONT SIZE=5 > 
-        
-                <p> ¿Consideras que presentas dificultades en el
-                     funcionamiento diario en el ambito personal, familiar, social o de cualquier otro tipo? 
-                    </p>
-        
-    </FONT> 
+    <div id="prueba" class="parrafos">        
+                <p> </p>
     </div>
     <br>
 <br>
             <div align="center"> 
-                <a class="boton_personalizado_si_no" [routerLink]="['/prediccion1seccion1']">Si</a>
+                <input type="button" class="boton_personalizado_si_no" (click)="guardarRespuesta(1)" value="Si">
               
-                <a class="boton_personalizado_si_no" [routerLink]="['/seccion1pregunta2']">No</a>
+                <input type="button" class="boton_personalizado_si_no" (click)="guardarRespuesta(0)" value="No">
             
 
     </div>

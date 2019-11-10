@@ -26,6 +26,7 @@ import { AdminService } from './service/AdminService';
 
 
 
+
 const routes: Routes=  [ 
 {path:'',component: LoginComponent, canActivate:[NoLoginGuard]},   
 {path:'login',component: LoginComponent, canActivate:[NoLoginGuard]},
@@ -67,7 +68,7 @@ const routes: Routes=  [
     AppRoutingModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    HttpModule
+    HttpModule,
   ],
   providers: [LoginGuard,NoLoginGuard, AdminService],
   bootstrap: [AppComponent]

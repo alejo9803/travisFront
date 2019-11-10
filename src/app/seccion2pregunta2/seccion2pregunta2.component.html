@@ -11,20 +11,15 @@
                 </h2>      
     </div>
 <br>
-    <div class="parrafos">
-            <FONT SIZE=5 > 
-        <p>¿Se ve afectado negativamente tu estado de animo después de haber realizado el tratamiento para mejorar 
-            tu condición fisica?
-    
-        </p>
-    </FONT> 
+    <div id="prueba" class="parrafos">
+        <p> </p>
     </div>
 <br>
 <br>
             <div align="center"> 
-                <a class="boton_personalizado_si_no" [routerLink]="['/seccion2pregunta3']">Si</a>
+                <input type="button" class="boton_personalizado_si_no" (click)="guardarRespuesta(1)" value="Si">
               
-                <a class="boton_personalizado_si_no" [routerLink]="['/seccion1pregunta2']">No</a>
+                <input type="button" class="boton_personalizado_si_no" (click)="guardarRespuesta(0)" value="No">
             
 
     </div>

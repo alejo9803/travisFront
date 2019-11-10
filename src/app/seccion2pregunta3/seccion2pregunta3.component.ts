@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AdminService } from './../service/AdminService';
 
 @Component({
   selector: 'app-seccion2pregunta3',
@@ -8,12 +9,28 @@ import { Router } from '@angular/router';
 })
 export class Seccion2pregunta3Component implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private AdminService:AdminService) {
+    this.getPregunta()
+   }
 
   ngOnInit() {
   }
   logout(){
     localStorage.removeItem('email');
     this.router.navigate(['']);
+  }
+  guardarRespuesta(respuesta){
+    localStorage.setItem( 'respuesta7', respuesta);
+      this.router.navigate(['/prediccion2seccion2']);
+  }
+    
+
+  getPregunta():void{
+     this.AdminService.getPreguntas(7).then(function(data){
+       console.log(data)
+       document.getElementById("prueba").firstChild.textContent = data.descripcion
+       
+     })
+     
   }
 }

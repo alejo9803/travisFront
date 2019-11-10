@@ -2,9 +2,9 @@ from django.shortcuts import render
 
 from rest_framework import generics
 
-from software_app.models import Psicologo, Paciente, Pregunta, Historia, Pregunta_Paciente 
+from software_app.models import Psicologo, Paciente, Pregunta, Historia, Pregunta_Paciente, Contador
 
-from software_app.serializer import PsicologoSerializer, PacienteSerializer, PreguntaSerializer, HistoriaSerializer, Pregunta_PacienteSerializer
+from software_app.serializer import PsicologoSerializer, PacienteSerializer, PreguntaSerializer, HistoriaSerializer, Pregunta_PacienteSerializer, ContadorSerializer
 
 
 class PsicologoList(generics.ListCreateAPIView):
@@ -46,5 +46,13 @@ class Pregunta_PacienteList(generics.ListCreateAPIView):
 class Pregunta_PacienteDetail(generics.RetrieveUpdateDestroyAPIView):
 	queryset = Pregunta_Paciente.objects.all()
 	serializer_class = Pregunta_PacienteSerializer
+
+class ContadorList(generics.ListCreateAPIView):
+	queryset = Contador.objects.all()
+	serializer_class = ContadorSerializer
+
+class ContadorDetail(generics.RetrieveUpdateDestroyAPIView):
+	queryset=Contador.objects.all()
+	serializer_class = ContadorSerializer
 
 # Create your views here.

@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from software_app.models import Psicologo, Paciente, Historia, Pregunta, Pregunta_Paciente
+from software_app.models import Psicologo, Paciente, Historia, Pregunta, Pregunta_Paciente, Contador
 
 class PsicologoSerializer(serializers.ModelSerializer):
 	class Meta:
@@ -20,9 +20,14 @@ class PreguntaSerializer(serializers.ModelSerializer):
 class Pregunta_PacienteSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Pregunta_Paciente
-		fields = ('idPregunta_Paciente','idPaciente','idPregunta','respuesta')
+		fields = ('idPregunta_Paciente','idPaciente','idPregunta','respuesta','idHistoria')
 
 class HistoriaSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Historia
-		fields = ('idHistoria','descripcion','fecha','prediccion','idPsicologo','idPregunta_Paciente')
+		fields = ('idHistoria','descripcion','fecha','prediccion','idPsicologo')
+
+class ContadorSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = Contador
+		fields = ('contadorHistorias','contadorPregunta_Paciente','idContador')

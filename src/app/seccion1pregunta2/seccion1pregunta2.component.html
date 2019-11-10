@@ -11,11 +11,11 @@
                 </h2>      
     </div>
 <br>
-    <div class="parrafos">
-            <FONT SIZE=5 > 
-        <p>Según lo acontecido en las ultimas dos semanas, 
-            ¿te sientes identificado con alguna de las situaciones que se presentan a continuación?
-            </p>
+    <div id="prueba" class="parrafos">
+        <p> </p>
+    </div>
+
+    <div>
             <br>
             <ul align="left">
 
@@ -46,13 +46,13 @@
             </ul>
 <br>
         
-    </FONT> 
+     
     </div>
 <br>
             <div align="center"> 
-                <a class="boton_personalizado_si_no" [routerLink]="['/seccion1pregunta3']">Si</a>
+                <input type="button" class="boton_personalizado_si_no" (click)="guardarRespuesta(1)" value="Si">
               
-                <a class="boton_personalizado_si_no" [routerLink]="['/seccion1pregunta2']">No</a>
+                <input type="button" class="boton_personalizado_si_no" (click)="guardarRespuesta(0)" value="No">
             
 
     </div>

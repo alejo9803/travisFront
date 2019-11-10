@@ -11,12 +11,10 @@
                     </h2>      
         </div>
     <br>
-        <div class="parrafos">
-                <FONT SIZE=5 > 
-            <p>¿Presentas signos o sintomas que afectan tu condición fisica y por lo tanto 
-                impacten negativamente tu estado de animo actual?, tales como:
-            </p>
-
+        <div id="prueba" class="parrafos">
+                <p> </p>
+        </div>
+        <div>
             <ul align="left">
 
                     <li>
@@ -43,13 +41,12 @@
                             <a>Hinchazon en tus extremidades.</a>
                         </li>  
                 </ul>
-        </FONT> 
         </div>
     <br>
                 <div align="center"> 
-                    <a class="boton_personalizado_si_no" [routerLink]="['/prediccion1seccion2']">Si</a>
-                  
-                    <a class="boton_personalizado_si_no" [routerLink]="['/seccion1pregunta2']">No</a>
+                    <input type="button" class="boton_personalizado_si_no" (click)="guardarRespuesta(1)" value="Si">
+              
+                    <input type="button" class="boton_personalizado_si_no" (click)="guardarRespuesta(0)" value="No">
                 
     
         </div>

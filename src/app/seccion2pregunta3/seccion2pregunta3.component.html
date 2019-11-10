@@ -11,11 +11,11 @@
                     </h2>      
         </div>
     <br>
-        <div class="parrafos">
-                <FONT SIZE=5 > 
-            <p>Durante al menos una semana, ¿Has presentado alguno de los siguientes sintomas lo suficientemente graves para requerir reclusión en algún centro hospitalario?
-            </p>
+        <div id="prueba" class="parrafos">
+            <p></p>
+        </div>
 
+        <div>
             <ul align="left">
 
                     <li>
@@ -38,14 +38,13 @@
                     <li>
                             <a>Aumento en tu autoestima.</a>
                         </li>  
-                </ul>
-        </FONT> 
+                </ul> 
         </div>
     <br>
                 <div align="center"> 
-                    <a class="boton_personalizado_si_no" [routerLink]="['/prediccion2seccion2']">Si</a>
-                  
-                    <a class="boton_personalizado_si_no" [routerLink]="['/seccion1pregunta2']">No</a>
+                    <input type="button" class="boton_personalizado_si_no" (click)="guardarRespuesta(1)" value="Si">
+              
+                    <input type="button" class="boton_personalizado_si_no" (click)="guardarRespuesta(0)" value="No">
                 
     
         </div>

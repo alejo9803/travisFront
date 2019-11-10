@@ -3,4 +3,5 @@ export class Pregunta_Paciente{
     idPaciente:number
     idPregunta:number
     respuesta:string
+    idHistoria:number
 } 

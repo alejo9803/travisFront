@@ -18,4 +18,6 @@ urlpatterns = [
 	url(r'historia/(?P<pk>[0-9]+)$', views.HistoriaDetail.as_view()),
 	url(r'^pregunta_paciente$', views.Pregunta_PacienteList.as_view()),
 	url(r'pregunta_paciente/(?P<pk>[0-9]+)$', views.Pregunta_PacienteDetail.as_view()),
+	url(r'^contador$', views.ContadorList.as_view()),
+	url(r'contador/(?P<pk>[0-9]+)$', views.ContadorDetail.as_view())
 	]

@@ -4,5 +4,4 @@ export class Historia{
     fecha:string
     prediccion:string
     idPsicologo:number
-    idPregunta_Paciente:number
 }

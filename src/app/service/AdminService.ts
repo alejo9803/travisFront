@@ -1,7 +1,12 @@
 import { Injectable} from '@angular/core';
 import { Headers, Http } from '@angular/http';
+
 import { Pregunta } from './Pregunta';
+import { Paciente } from './Paciente';
 import { Observable } from 'rxjs';
+import { Pregunta_Paciente } from './Pregunta_Paciente';
+import { Historia } from './Historia';
+import { Contador } from './Contador'
 
 @Injectable({
     providedIn: 'root',
@@ -12,18 +17,49 @@ export class AdminService{
 
     constructor(private http:Http){}
 
-    getPreguntas(): Promise<Pregunta> {
-        var resultado = this.http.get('http://localhost:8000/pregunta/2?format=json', {headers: this.headers}).toPromise()
+    getPreguntas(i:number): Promise<Pregunta> {
+        var resultado = this.http.get('http://localhost:8000/pregunta/'+i+'?format=json', {headers: this.headers}).toPromise()
         .then(response=> response.json() as Pregunta)        
         return resultado
     }
 
-    createPregunta(p: Pregunta): Promise<Pregunta>{
-        return this.http
-        .post("http://localhost:8000/pregunta", JSON.stringify(p), {headers: this.headers})
+    getPaciente(i:number): Promise<Paciente> {
+        var resultado = this.http.get('http://localhost:8000/paciente/'+i+'?format=json', {headers: this.headers})
         .toPromise()
-        .then(response => response.json() as Pregunta)
+        .then(response=> response.json() as Paciente)
+        
+        return resultado
+    }
+
+    createPregunta_Paciente(p: Pregunta_Paciente): Promise<Pregunta_Paciente>{
+        return this.http
+        .post("http://localhost:8000/pregunta_paciente", JSON.stringify(p), {headers: this.headers})
+        .toPromise()
+        .then(response => response.json() as Pregunta_Paciente)
 
     }
-}
 
+    createHistoria(h: Historia): Promise<Historia>{
+        return this.http
+        .post("http://localhost:8000/historia", JSON.stringify(h), {headers: this.headers})
+        .toPromise()
+        .then(response => response.json() as Historia)
+
+    }
+
+    getContador():Promise<Contador>{
+        var resultado=this.http.get('http://localhost:8000/contador/1?format=json', {headers:this.headers})
+        .toPromise()
+        .then(response=>response.json() as Contador)
+
+        return resultado
+    }
+
+    updateContador(contador:Contador):Promise<Contador>{
+        var resultado=this.http.put('http://localhost:8000/contador/1?format=json', contador, {headers:this.headers})
+        .toPromise()
+        .then(response => response.json() as Contador)
+
+        return resultado
+    }
+}

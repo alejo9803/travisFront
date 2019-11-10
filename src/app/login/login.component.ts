@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AdminService } from './../service/AdminService';
+import { Paciente } from '../service/Paciente';
 
 @Component({
   selector: 'app-login',
@@ -9,20 +11,26 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private AdminService : AdminService) {
 
    }
 
   ngOnInit() {
   }
 
-login(form: NgForm){
-console.log(form.value);
+  pacientes : Paciente;
 
-if (form.value.email==='amoralesa@uniquindio.edu.co' && form.value.password==='1234'){
-localStorage.setItem( 'email', form.value.email);
-this.router.navigate(['/introduccion']);
-}
+
+login(form: NgForm){
+  var url = this.router
+  this.AdminService.getPaciente(form.value.password).then(function(data){
+    if(form.value.identificacion=== data.nombre){
+      localStorage.setItem( 'email', form.value.password);
+      url.navigate(['/introduccion'])   
+    }
+    })
+    
+  
 }
 
 }
