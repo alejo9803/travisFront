@@ -20,9 +20,8 @@
 <br>
 <br>
         <div align="center"> 
-            <a class="boton_personalizado_si_no" [routerLink]="['/prediccion1seccion1p']">Si</a>
-          
-            <a class="boton_personalizado_si_no" [routerLink]="['/prediccion2seccion1pno']">No</a>
-        
+                <input type="button" class="boton_personalizado_si_no" (click)="guardarRespuestaSI(1)" value="Si" >
+              
+                <input type="button" class="boton_personalizado_si_no" (click)="guardarRespuestaNO(0)" value="No" >
 
 </div>

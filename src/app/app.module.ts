@@ -1,5 +1,6 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, Component } from '@angular/core';
+import { NgModule, Component, ContentChildren } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IntroduccionComponent } from './introduccion/introduccion.component';
@@ -35,8 +36,10 @@ import { Prediccion2seccion1pnoComponent } from './prediccion2seccion1pno/predic
 import { Prediccion2seccion1noComponent } from './prediccion2seccion1no/prediccion2seccion1no.component';
 import { Prediccion4seccion1pnoComponent } from './prediccion4seccion1pno/prediccion4seccion1pno.component';
 import { Prediccion3seccion1Component } from './prediccion3seccion1/prediccion3seccion1.component';
-
-
+import { Prediccion4seccion1Component } from './prediccion4seccion1/prediccion4seccion1.component';
+import { PsicologoComponent } from './psicologo/psicologo.component';
+import { SharedModule } from './shared/shared.module';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 
 
@@ -67,6 +70,8 @@ const routes: Routes=  [
 {path:'prediccion4seccion1pno',component:Prediccion4seccion1pnoComponent, canActivate: [LoginGuard]},
 {path:'prediccion2seccion1no',component:Prediccion2seccion1noComponent, canActivate: [LoginGuard]},
 {path:'prediccion3seccion1',component:Prediccion3seccion1Component, canActivate: [LoginGuard]},
+{path:'psicologo',component:PsicologoComponent, canActivate: [LoginGuard]},
+
 ];
 
 @NgModule({
@@ -99,6 +104,12 @@ const routes: Routes=  [
     Prediccion4seccion1pnoComponent,
     Prediccion2seccion1noComponent,
     Prediccion3seccion1Component,
+    Prediccion4seccion1Component,
+    PsicologoComponent,
+    UsuariosComponent,
+  
+    
+    
   
     
     
@@ -108,7 +119,9 @@ const routes: Routes=  [
     AppRoutingModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    HttpModule
+    HttpModule,
+    SharedModule,
+    BrowserAnimationsModule,
   ],
   providers: [LoginGuard,NoLoginGuard, AdminService],
   bootstrap: [AppComponent]
