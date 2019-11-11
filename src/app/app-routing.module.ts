@@ -8,7 +8,7 @@ import { PsicologoComponent } from './psicologo/psicologo.component';
 const routes: Routes = [
   {
   
-        path: '',
+        path: 'psicologo',
         component: PsicologoComponent,
         children: [
           {
