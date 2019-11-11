@@ -16,6 +16,7 @@ export class Seccion2pregunta1Component implements OnInit {
   }
   logout(){
     localStorage.removeItem('email');
+    this.reiniciar();
     this.router.navigate(['']);
   }
     
@@ -30,11 +31,17 @@ export class Seccion2pregunta1Component implements OnInit {
   }
   guardarRespuestaSI(respuesta){
     localStorage.setItem( 'respuesta5', respuesta);
-    this.router.navigate(['/seccion2pregunta2']);
+    this.router.navigate(['/prediccion1seccion2']);
     }
 
     guardarRespuestaNO(respuesta){
       localStorage.setItem( 'respuesta5', respuesta);
       this.router.navigate(['/seccion2pregunta2']);
+      }
+
+      reiniciar():void{
+        for(var i=2;i<=5;i++){
+          localStorage.removeItem('respuesta'+i);
+        }
       }
 }

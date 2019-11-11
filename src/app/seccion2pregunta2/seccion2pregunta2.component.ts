@@ -16,6 +16,7 @@ export class Seccion2pregunta2Component implements OnInit {
   }
   logout(){
     localStorage.removeItem('email');
+    this.reiniciar();
     this.router.navigate(['']);
   }
     
@@ -35,5 +36,11 @@ export class Seccion2pregunta2Component implements OnInit {
     guardarRespuestaNO(respuesta){
       localStorage.setItem( 'respuesta6', respuesta);
       this.router.navigate(['/seccion2pregunta3']);
+      }
+
+      reiniciar():void{
+        for(var i=2;i<=6;i++){
+          localStorage.removeItem('respuesta'+i);
+        }
       }
 }

@@ -14,15 +14,22 @@ export class Seccion2pregunta2pComponent implements OnInit {
   }
   logout(){
     localStorage.removeItem('email');
+    this.reiniciar();
     this.router.navigate(['']);
   }
 
   guardarRespuestaSI(respuesta){
-    localStorage.setItem( 'respuesta11', respuesta);
+    localStorage.setItem( 'respuesta6', respuesta);
     this.router.navigate(['/seccion2pregunta3p']);
     }
     guardarRespuestaNO(respuesta){
-      localStorage.setItem( 'respuesta11', respuesta);
+      localStorage.setItem( 'respuesta6', respuesta);
       this.router.navigate(['/seccion2pregunta3p']);
+      }
+
+      reiniciar():void{
+        for(var i=2;i<=6;i++){
+          localStorage.removeItem('respuesta'+i);
+        }
       }
 }

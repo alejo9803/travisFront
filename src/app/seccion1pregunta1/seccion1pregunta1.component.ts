@@ -18,6 +18,7 @@ export class Seccion1pregunta1Component implements OnInit {
   }
   logout(){
     localStorage.removeItem('email');
+    this.reiniciar();
     this.router.navigate(['']);
   }
 
@@ -38,5 +39,11 @@ export class Seccion1pregunta1Component implements OnInit {
        
      })
      
+  }
+
+  reiniciar():void{
+    for(var i=2;i<=2;i++){
+      localStorage.removeItem('respuesta'+i);
+    }
   }
 }

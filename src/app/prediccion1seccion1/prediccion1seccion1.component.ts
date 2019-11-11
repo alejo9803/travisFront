@@ -14,6 +14,13 @@ export class Prediccion1seccion1Component implements OnInit {
   }
   logout(){
     localStorage.removeItem('email');
+    this.reiniciar();
     this.router.navigate(['']);
+  }
+
+  reiniciar():void{
+    for(var i=2;i<=4;i++){
+      localStorage.removeItem('respuesta'+i);
+    }
   }
 }
