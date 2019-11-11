@@ -176,6 +176,6 @@ export class Seccion2pregunta3Component implements OnInit {
       localStorage.setItem( 'respuesta7', respuesta);
       this.createHistoria();
       this.createPregunta_Paciente();
-      this.router.navigate(['/prediccion3seccion1']);
+      this.router.navigate(['/prediccion2seccion2']);
       }
 }

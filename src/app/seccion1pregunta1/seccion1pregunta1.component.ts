@@ -28,7 +28,7 @@ export class Seccion1pregunta1Component implements OnInit {
 
     guardarRespuestaNO(respuesta){
       localStorage.setItem( 'respuesta2', respuesta);
-      this.router.navigate(['/prediccion2seccion1no']);
+      this.router.navigate(['/seccion1pregunta2']);
       }
 
   getPregunta():void{

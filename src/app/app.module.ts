@@ -31,12 +31,6 @@ import { Seccion1pregunta1pComponent } from './seccion1pregunta1p/seccion1pregun
 import { Seccion1pregunta2pComponent } from './seccion1pregunta2p/seccion1pregunta2p.component';
 import { Seccion1pregunta3pComponent } from './seccion1pregunta3p/seccion1pregunta3p.component';
 import { Prediccion1seccion1pComponent } from './prediccion1seccion1p/prediccion1seccion1p.component';
-import { Prediccion1seccion1pnoComponent } from './prediccion1seccion1pno/prediccion1seccion1pno.component';
-import { Prediccion2seccion1pnoComponent } from './prediccion2seccion1pno/prediccion2seccion1pno.component';
-import { Prediccion2seccion1noComponent } from './prediccion2seccion1no/prediccion2seccion1no.component';
-import { Prediccion4seccion1pnoComponent } from './prediccion4seccion1pno/prediccion4seccion1pno.component';
-import { Prediccion3seccion1Component } from './prediccion3seccion1/prediccion3seccion1.component';
-import { Prediccion4seccion1Component } from './prediccion4seccion1/prediccion4seccion1.component';
 import { PsicologoComponent } from './psicologo/psicologo.component';
 import { SharedModule } from './shared/shared.module';
 import { UsuariosComponent } from './usuarios/usuarios.component';
@@ -66,11 +60,6 @@ const routes: Routes=  [
 {path:'seccion1pregunta2p',component:Seccion1pregunta2pComponent, canActivate: [LoginGuard]},
 {path:'seccion1pregunta3p',component:Seccion1pregunta3pComponent, canActivate: [LoginGuard]},
 {path:'prediccion1seccion1p',component:Prediccion1seccion1pComponent, canActivate: [LoginGuard]},
-{path:'prediccion1seccion1pno',component:Prediccion1seccion1pnoComponent, canActivate: [LoginGuard]},
-{path:'prediccion2seccion1pno',component:Prediccion2seccion1pnoComponent, canActivate: [LoginGuard]},
-{path:'prediccion4seccion1pno',component:Prediccion4seccion1pnoComponent, canActivate: [LoginGuard]},
-{path:'prediccion2seccion1no',component:Prediccion2seccion1noComponent, canActivate: [LoginGuard]},
-{path:'prediccion3seccion1',component:Prediccion3seccion1Component, canActivate: [LoginGuard]},
 {path:'psicologo',component:PsicologoComponent, canActivate: [LoginGuard]},
 
 ];
@@ -100,12 +89,6 @@ const routes: Routes=  [
     Seccion1pregunta2pComponent,
     Seccion1pregunta3pComponent,
     Prediccion1seccion1pComponent,
-    Prediccion1seccion1pnoComponent,
-    Prediccion2seccion1pnoComponent,
-    Prediccion4seccion1pnoComponent,
-    Prediccion2seccion1noComponent,
-    Prediccion3seccion1Component,
-    Prediccion4seccion1Component,
     PsicologoComponent,
     UsuariosComponent,
   
