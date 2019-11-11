@@ -20,12 +20,6 @@ export class Seccion1pregunta2Component implements OnInit {
     localStorage.removeItem('email');
     this.router.navigate(['']);
   }
-<<<<<<< HEAD
-
-  guardarRespuesta(respuesta){
-    localStorage.setItem( 'respuesta3', respuesta);
-    this.router.navigate(['/seccion1pregunta3']);
-    }
 
   getPregunta():void{
      this.AdminService.getPreguntas(3).then(function(data){
@@ -33,17 +27,15 @@ export class Seccion1pregunta2Component implements OnInit {
        document.getElementById("prueba").firstChild.textContent = data.descripcion
        
      })
-     
-  }
-=======
-  guardarRespuestaSI(respuesta){
-    localStorage.setItem( 'respuesta11', respuesta);
+    }
+      guardarRespuestaSI(respuesta){
+    localStorage.setItem( 'respuesta3', respuesta);
     this.router.navigate(['/seccion1pregunta3']);
     }
 
     guardarRespuestaNO(respuesta){
-      localStorage.setItem( 'respuesta11', respuesta);
+      localStorage.setItem( 'respuesta3', respuesta);
       this.router.navigate(['/prediccion2seccion1no']);
       }
->>>>>>> 7b792524f453bb006604cd55931636d93866eccc
 }
+

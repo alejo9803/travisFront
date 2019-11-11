@@ -18,14 +18,7 @@ export class Seccion2pregunta2Component implements OnInit {
     localStorage.removeItem('email');
     this.router.navigate(['']);
   }
-
-<<<<<<< HEAD
-  guardarRespuesta(respuesta){
-    localStorage.setItem( 'respuesta6', respuesta);
-      this.router.navigate(['/seccion2pregunta3']);
-  }
     
-
   getPregunta():void{
      this.AdminService.getPreguntas(6).then(function(data){
        console.log(data)
@@ -34,15 +27,13 @@ export class Seccion2pregunta2Component implements OnInit {
      })
      
   }
-=======
   guardarRespuestaSI(respuesta){
-    localStorage.setItem( 'respuesta11', respuesta);
+    localStorage.setItem( 'respuesta6', respuesta);
     this.router.navigate(['/seccion2pregunta3']);
     }
 
     guardarRespuestaNO(respuesta){
-      localStorage.setItem( 'respuesta11', respuesta);
+      localStorage.setItem( 'respuesta6', respuesta);
       this.router.navigate(['/prediccion3seccion1']);
       }
->>>>>>> 7b792524f453bb006604cd55931636d93866eccc
 }

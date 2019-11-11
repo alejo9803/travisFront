@@ -121,11 +121,8 @@ const routes: Routes=  [
     RouterModule.forRoot(routes),
     FormsModule,
     HttpModule,
-<<<<<<< HEAD
-=======
     SharedModule,
     BrowserAnimationsModule,
->>>>>>> 7b792524f453bb006604cd55931636d93866eccc
   ],
   providers: [LoginGuard,NoLoginGuard, AdminService],
   bootstrap: [AppComponent]
