@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { Pregunta_Paciente } from './Pregunta_Paciente';
 import { Historia } from './Historia';
 import { Contador } from './Contador'
+import { Psicologo } from './Psicologo';
 
 @Injectable({
     providedIn: 'root',
@@ -27,6 +28,14 @@ export class AdminService{
         var resultado = this.http.get('http://localhost:8000/paciente/'+i+'?format=json', {headers: this.headers})
         .toPromise()
         .then(response=> response.json() as Paciente)
+        
+        return resultado
+    }
+
+    getPsicologo(i:number): Promise<Psicologo> {
+        var resultado = this.http.get('http://localhost:8000/psicologo/'+i+'?format=json', {headers: this.headers})
+        .toPromise()
+        .then(response=> response.json() as Psicologo)
         
         return resultado
     }

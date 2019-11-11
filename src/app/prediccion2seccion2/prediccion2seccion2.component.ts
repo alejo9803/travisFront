@@ -43,7 +43,7 @@ export class Prediccion2seccion2Component implements OnInit {
         pregunta.idPregunta_Paciente=data.contadorPregunta_Paciente+1
         pregunta.idHistoria=data.contadorHistorias
         pregunta.idPaciente=paciente;
-        pregunta.idPregunta=2;
+        pregunta.idPregunta=8;
         if(respuesta1==="1"){
           pregunta.respuesta='Si';
         }
@@ -58,7 +58,7 @@ export class Prediccion2seccion2Component implements OnInit {
         pregunta.idPregunta_Paciente=data.contadorPregunta_Paciente+2
         pregunta.idHistoria=data.contadorHistorias
         pregunta.idPaciente=paciente;
-        pregunta.idPregunta=3;
+        pregunta.idPregunta=9;
         if(respuesta2==="1"){
           pregunta.respuesta='Si';
         }
@@ -73,7 +73,7 @@ export class Prediccion2seccion2Component implements OnInit {
         pregunta.idPregunta_Paciente=data.contadorPregunta_Paciente+3
         pregunta.idHistoria=data.contadorHistorias
         pregunta.idPaciente=paciente;
-        pregunta.idPregunta=4;
+        pregunta.idPregunta=10;
         if(respuesta3==="1"){
           pregunta.respuesta='Si';
         }
@@ -88,7 +88,7 @@ export class Prediccion2seccion2Component implements OnInit {
         pregunta.idPregunta_Paciente=data.contadorPregunta_Paciente+4
         pregunta.idHistoria=data.contadorHistorias
         pregunta.idPaciente=paciente;
-        pregunta.idPregunta=5;
+        pregunta.idPregunta=11;
         if(respuesta4==="1"){
           pregunta.respuesta='Si';
         }
@@ -103,7 +103,7 @@ export class Prediccion2seccion2Component implements OnInit {
         pregunta.idPregunta_Paciente=data.contadorPregunta_Paciente+5
         pregunta.idHistoria=data.contadorHistorias
         pregunta.idPaciente=paciente;
-        pregunta.idPregunta=6;
+        pregunta.idPregunta=12;
         if(respuesta5==="1"){
           pregunta.respuesta='Si';
         }
@@ -118,7 +118,7 @@ export class Prediccion2seccion2Component implements OnInit {
         pregunta.idPregunta_Paciente=data.contadorPregunta_Paciente+6
         pregunta.idHistoria=data.contadorHistorias
         pregunta.idPaciente=paciente;
-        pregunta.idPregunta=7;
+        pregunta.idPregunta=13;
         if(respuesta6==="1"){
           pregunta.respuesta='Si';
         }

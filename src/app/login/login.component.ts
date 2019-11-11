@@ -23,12 +23,28 @@ export class LoginComponent implements OnInit {
 
 login(form: NgForm){
   var url = this.router
-  this.AdminService.getPaciente(form.value.password).then(function(data){
+  var admin = this.AdminService
+  
+  this.AdminService.getPsicologo(form.value.password).then(function(data){
+    console.log(form.value.identificacion)
+    console.log(data.nombre)
     if(form.value.identificacion=== data.nombre){
-      localStorage.setItem( 'email', form.value.password);
-      url.navigate(['/introduccion'])   
+    localStorage.setItem( 'email', form.value.password);
+      
+      url.navigate(['/psicologo']) 
+    } else{
+      admin.getPaciente(form.value.password).then(function(data){
+    
+        localStorage.setItem( 'email', form.value.password);
+        url.navigate(['/introduccion'])   
+      
+      })
     }
-    })
+  })
+  
+ 
+  
+  
     
   
 }

@@ -3,12 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import {Seccion1pregunta1Component} from './seccion1pregunta1/seccion1pregunta1.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { PsicologoComponent } from './psicologo/psicologo.component';
+import { LoginComponent } from './login/login.component';
+
 
 
 const routes: Routes = [
   {
-  
-        path: 'psicologo',
+    
+    
+        path: '',
         component: PsicologoComponent,
         children: [
           {
@@ -18,7 +21,9 @@ const routes: Routes = [
           },
         ]
       
+    
   },
+    
 ];
 
 @NgModule({
