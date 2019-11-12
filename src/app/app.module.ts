@@ -41,6 +41,10 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 const routes: Routes=  [ 
 {path:'',component: LoginComponent, canActivate:[NoLoginGuard]},   
 {path:'login',component: LoginComponent, canActivate:[NoLoginGuard]},
+{path:'psicologo',component: PsicologoComponent, canActivate:[NoLoginGuard],children:[
+
+  {path:'usuario',component: UsuariosComponent, canActivate:[NoLoginGuard]},
+]},
 {path:'seccion1pregunta1',component:Seccion1pregunta1Component, canActivate: [LoginGuard]},
 {path:'introduccion',component:IntroduccionComponent, canActivate: [LoginGuard]},
 {path:'seccion1pregunta2',component:Seccion1pregunta2Component, canActivate: [LoginGuard]},

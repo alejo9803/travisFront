@@ -8,21 +8,6 @@ import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
-  {
-    
-    
-        path: '',
-        component: PsicologoComponent,
-        children: [
-          {
-           
-            component: UsuariosComponent,
-            path: 'usuarios',
-          },
-        ]
-      
-    
-  },
     
 ];
 
