@@ -33,7 +33,7 @@ export class AdminService{
     }
 
     getPsicologo(i:number): Promise<Psicologo> {
-        var resultado = this.http.get('https://proyectopredictmind.herokuapp.com/psicologo'+i+'?format=json', {headers: this.headers})
+        var resultado = this.http.get('https://proyectopredictmind.herokuapp.com/psicologo/'+i+'?format=json', {headers: this.headers})
         .toPromise()
         .then(response=> response.json() as Psicologo)
         
