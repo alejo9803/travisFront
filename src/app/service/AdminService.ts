@@ -40,6 +40,8 @@ export class AdminService{
         return resultado
     }
 
+    
+
     createPregunta_Paciente(p: Pregunta_Paciente): Promise<Pregunta_Paciente>{
         return this.http
         .post("https://localhost:8000/pregunta_paciente", JSON.stringify(p), {headers: this.headers})
